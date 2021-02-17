@@ -4,7 +4,6 @@ on:
   schedule:
     # Run every 15min
     - cron: "*/15 * * * *"
-
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
@@ -26,8 +25,8 @@ jobs:
           npm run collect
       - name: "Configure git and commit"
         run: |
-          git config user.name github-actions
-          git config user.email github-actions@github.com
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
           git add data
           git commit -am "bot: Data update"
           git push
