@@ -1,0 +1,30 @@
+name: Data Collector
+
+on:
+  schedule:
+    # Run every 15min
+    - cron: "*/15 * * * *"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: "15"
+      - name: "Install packages"
+        run: |
+          cd collector
+          npm install
+      - name: "Add new point"
+        run: |
+          cd collector
+          npm run collect
+      - name: "Configure git and commit"
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add .
+          git commit -am "bot: Data update"
+          git push
