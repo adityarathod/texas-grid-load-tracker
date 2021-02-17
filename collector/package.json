@@ -1,0 +1,16 @@
+{
+	"name": "texas-load-collector",
+	"version": "1.0.0",
+	"main": "./dist/index.js",
+	"repository": "https://github.com/adityarathod/texas-grid-load-tracker",
+	"author": "Aditya Rathod",
+	"license": "none",
+	"private": false,
+	"dependencies": {
+		"cheerio": "^1.0.0-rc.5",
+		"http-parser-js": "^0.5.3"
+	},
+	"devDependencies": {
+		"typescript": "^4.1.5"
+	}
+}
