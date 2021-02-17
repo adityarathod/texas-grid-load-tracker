@@ -1,16 +1,28 @@
 {
-	"name": "texas-load-collector",
-	"version": "1.0.0",
-	"main": "./dist/index.js",
-	"repository": "https://github.com/adityarathod/texas-grid-load-tracker",
-	"author": "Aditya Rathod",
-	"license": "none",
-	"private": false,
-	"dependencies": {
-		"cheerio": "^1.0.0-rc.5",
-		"http-parser-js": "^0.5.3"
-	},
-	"devDependencies": {
-		"typescript": "^4.1.5"
-	}
+  "name": "texas-load-collector",
+  "version": "1.0.0",
+  "main": "./dist/index.js",
+  "repository": "https://github.com/adityarathod/texas-grid-load-tracker",
+  "author": "Aditya Rathod",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "build": "tsc",
+    "precollect": "tsc",
+    "collect": "node ./dist/index.js"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.5",
+    "http-parser-js": "^0.5.3"
+  },
+  "devDependencies": {
+    "@tsconfig/node14": "^1.0.0",
+    "@types/node": "^14.14.28",
+    "@typescript-eslint/eslint-plugin": "^4.15.1",
+    "@typescript-eslint/parser": "^4.15.1",
+    "eslint": "^7.20.0",
+    "eslint-config-prettier": "^7.2.0",
+    "prettier": "^2.2.1",
+    "typescript": "^4.1.5"
+  }
 }
