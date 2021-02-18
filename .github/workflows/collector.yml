@@ -32,6 +32,7 @@ jobs:
       - name: "Copy data"
         run: |
           cp ./data/points.json ./docs
+          touch ./docs/.nojekyll
       - name: "Configure git and commit"
         run: |
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
