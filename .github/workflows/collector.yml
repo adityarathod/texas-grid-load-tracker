@@ -22,13 +22,13 @@ jobs:
       - name: "Add new point"
         run: |
           cd collector
-          npm run collect
+          yarn collect
       - name: "(Re)deploy web app"
         run: |
           mkdir -p docs
           cd frontend
-          npm install
-          npm run deploy
+          yarn
+          yarn deploy
       - name: "Copy data"
         run: |
           cp ./data/points.json ./docs
