@@ -6,6 +6,7 @@
     "build": "next build",
     "export": "next export",
     "start": "next start",
+    "deploy": "next build && next export -o ../docs",
     "type-check": "tsc"
   },
   "dependencies": {
