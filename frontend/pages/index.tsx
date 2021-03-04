@@ -45,8 +45,13 @@ const IndexPage = () => {
   return (
     <Layout>
       <div className='mt-8'>
-        <h1 className='text-3xl text-center font-bold mb-1'>Texas Grid Load History</h1>
-        <h3 className='text-lg text-center text-gray-500 mb-8'>Updates every 15-20 minutes.</h3>
+        <h1 className='text-3xl text-center font-bold mb-1'>
+          ERCOT Grid Load History (Texas Power Grid Disaster, 2021)
+        </h1>
+        <h3 className='text-lg text-center text-gray-500 mb-8'>
+          The live updater was shut down <span className='font-bold'>March 3, 2021</span>, well
+          after the storm and power disaster. Before, this chart updated every 15-20 minutes.
+        </h3>
         <ResponsiveContainer width='100%' height={500}>
           <LineChart data={series} syncId='usage'>
             <CartesianGrid strokeDasharray='3 3' />
