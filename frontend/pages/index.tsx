@@ -46,11 +46,18 @@ const IndexPage = () => {
     <Layout>
       <div className='mt-8'>
         <h1 className='text-3xl text-center font-bold mb-1'>
-          ERCOT Grid Load History (Texas Power Grid Disaster, 2021)
+          ERCOT Grid Load History
+          <br />
+          (April Supply Shortages, 2021)
         </h1>
         <h3 className='text-lg text-center text-gray-500 mb-8'>
-          The live updater was shut down <span className='font-bold'>March 3, 2021</span>, well
-          after the storm and power disaster. Before, this chart updated every 15-20 minutes.
+          The live updater was shut down <span className='font-bold'>March 3, 2021</span>, but was
+          restarted on <span className='font-bold'>April 14, 2021</span> to document the ERCOT
+          shortages. Data documenting the Texas storm shortages is available on{' '}
+          <a href='//github.com/adityarathod/texas-grid-load-tracker' className='text-blue-600'>
+            GitHub
+          </a>
+          .
         </h3>
         <ResponsiveContainer width='100%' height={500}>
           <LineChart data={series} syncId='usage'>
@@ -80,7 +87,7 @@ const IndexPage = () => {
           </LineChart>
         </ResponsiveContainer>
         <div className='mt-10 text-sm text-center text-gray-500'>
-          <p>☕️ Stay safe and stay warm!</p>A small{' '}
+          <p>☕️ Stay safe! </p>A small{' '}
           <a href='//github.com/adityarathod/texas-grid-load-tracker' className='text-purple-500'>
             open-source
           </a>{' '}
